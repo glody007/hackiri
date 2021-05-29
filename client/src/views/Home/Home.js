@@ -4,6 +4,7 @@ import './Home.css';
 import NavBar from "../../components/Header/NavBar";
 import HackirienCard from "../../components/Card/Hackirien/HackirienCard";
 import AdvantageCard from "../../components/Card/Advantage/AdvantageCard";
+import { Link } from 'react-router-dom';
 
 function Home() {
     return (
@@ -11,7 +12,7 @@ function Home() {
             <header>
                 <NavBar />
             </header>
-
+            
             <div className="First-section">
               <div className="columns">
                 <div className="column is-two-thirds">
@@ -58,15 +59,11 @@ function Home() {
                   </div>
                 </div>
 
-                <button class="button is-black is-medium">More Projects from Hackiriens</button>
-              </div>
-            </div>
-
-            <div className="Footer pt-6">
-              <div className="">
-                <p className="is-align-self-flex-start">
-                  &copy; Hackiri 2021 All Rights Reserved
-                </p>
+                <Link to="/Projets">
+                  <button class="button is-black is-medium">
+                    More Projects from Hackiriens
+                  </button>
+                </Link>
               </div>
             </div>
         </div>

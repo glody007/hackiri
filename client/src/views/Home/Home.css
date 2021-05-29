@@ -41,11 +41,6 @@ body {
     font-size: calc(10px + 2vmin);
 }
 
-.Footer {
-    background-color: #fafcfc;
-    min-height: 20vh;
-}
-
 .App-link {
     color: #09d3ac;
 }
