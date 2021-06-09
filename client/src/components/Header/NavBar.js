@@ -21,9 +21,11 @@ const NavBar = () => {
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-black">
-                  GET STARTED
-                </a>
+                <Link to="/Registration">
+                  <a class="button is-black">
+                    COMMENCER
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,0 +1,7 @@
+.Main {
+    background-color: white;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+}

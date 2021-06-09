@@ -1,32 +1,29 @@
 import React from 'react';
 import './HackirienCard.css';
 
-const HackirienCard = () => {
+const HackirienCard = (props) => {
     return (
       <div class="card">
         <div class="card-image">
           <figure class="image is-4by3">
-            <img src="https://versions.bulma.io/0.7.1/images/placeholders/1280x960.png" alt="Placeholder image"/>
+            <img src={props.project.imageUrl} alt="Placeholder image"/>
           </figure>
         </div>
         <div class="card-content">
           <div class="media">
             <div class="media-left">
               <figure class="image is-48x48">
-                <img src="https://versions.bulma.io/0.7.1/images/placeholders/96x96.png" alt="Placeholder image"/>
+                <img src={props.project.creatorImageUrl} alt="Placeholder image"/>
               </figure>
             </div>
             <div class="media-content">
-              <p class="title is-4">John Smith</p>
-              <p class="subtitle is-6">@johnsmith</p>
+              <p class="title is-4">{props.project.creator}</p>
+              <p class="subtitle is-6">{props.project.creatorAlias}</p>
             </div>
           </div>
 
           <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@Hackiri</a>.
-            <br/>
-            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            {props.project.description}
           </div>
         </div>
       </div>

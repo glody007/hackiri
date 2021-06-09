@@ -5,10 +5,15 @@ import NavBar from "../../components/Header/NavBar";
 import HackirienCard from "../../components/Card/Hackirien/HackirienCard";
 
 function Projects() {
+
+    const project = {creatorName: 'Aaron', creatorAlias: '@Mukin',
+     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
+     creatorImageUrl: 'https://versions.bulma.io/0.7.1/images/placeholders/96x96.png',
+     imageUrl: 'https://versions.bulma.io/0.7.1/images/placeholders/1280x960.png'}
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
     const listProjects = numbers.map((number) =>
       <div key={number.toString()} className="column is-3">
-          <HackirienCard />
+          <HackirienCard project={project}/>
       </div>
     );
     return (
