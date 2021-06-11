@@ -1,14 +1,14 @@
 .blue {
     border-top: 5px solid #3260db;
-    height: 50vmin;
+    min-height: 50vmin;
 }
 
 .yellow {
     border-top: 5px solid #fff200;
-    height: 50vmin;
+    min-height: 50vmin;
 }
 
 .green {
     border-top: 5px solid #00cf03;
-    height: 50vmin;
+    min-height: 50vmin;
 }

@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import robot from '../../assets/robot.jpg';
 import './Home.css';
 import NavBar from "../../components/Header/NavBar";
 import HackirienCard from "../../components/Card/Hackirien/HackirienCard";
 import AdvantageCard from "../../components/Card/Advantage/AdvantageCard";
 import { Link } from 'react-router-dom';
+import { projectApi, registrationApi } from '../../api';
 
 function Home() {
 
-    const project = {creatorName: 'Aaron', creatorAlias: '@Mukin',
+    const projectDefault = {creatorName: 'Aaron', creatorAlias: '@Mukin',
      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
      creatorImageUrl: 'https://versions.bulma.io/0.7.1/images/placeholders/96x96.png',
      imageUrl: 'https://versions.bulma.io/0.7.1/images/placeholders/1280x960.png'}
+    const [project, setProject] = useState(projectDefault);
+
+    // Similar to componentDidMount and componentDidUpdate:
+    useEffect(() => {
+      
+    });
 
     return (
         <div className="App">
@@ -52,7 +59,7 @@ function Home() {
                     </div>
 
                     <div class="column">
-                      <Link to="/Registration">
+                      <Link to="/registration">
                         <button class="button is-black is-medium">
                           COMMENCER
                         </button>
@@ -84,7 +91,7 @@ function Home() {
                   </div>
                 </div>
 
-                <Link to="/Projets">
+                <Link to="/projets">
                   <button class="button is-black is-medium">
                     Plus de projets par des Hackiriens
                   </button>

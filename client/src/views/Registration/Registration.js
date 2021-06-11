@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import './Registration.css';
 import NavBar from "../../components/Header/NavBar";
 import { useForm } from "react-hook-form";
+import { useHistory } from 'react-router-dom';
+import { registrationApi } from '../../api';
 
 function Registration() {
 
+    const [loading, setLoading] = useState(false),
+          [postError, setPostError] = useState(false);
+    const history = useHistory();
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+
+    const onSubmit = data => {
+      setLoading(true);
+      setPostError(false);
+      data.numero = data.number
+      data.nom = data.name
+      registrationApi.post('/', {
+        data: data
+      })
+      .then(function (response) {
+        setLoading(false);
+        history.push('/home');
+      })
+      .catch(function (error) {
+        setLoading(false);
+        setPostError(true);
+      });
+    };
 
     return (
         <div className="">
@@ -78,7 +100,8 @@ function Registration() {
                   </div>
 
                   <div class="control">
-                    <input class="button is-danger is-fullwidth is-medium" type="submit" value="S'inscrire"/>
+                    <button className={`button is-danger is-fullwidth is-medium ${loading ? 'is-loading' : ''}`} type="submit">S'inscrire</button>
+                    <p class="help is-danger">{postError && "Erreur pendant l'enregistrement veuillez réessayer"}</p>
                   </div>
                 </form>
               </div>

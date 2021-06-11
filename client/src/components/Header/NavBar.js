@@ -6,9 +6,11 @@ const NavBar = () => {
     return (
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand ml-3">
-          <a class="title navbar-item" href="">
-            Hackiri.
-          </a>
+          <Link to="/">
+            <a class="title navbar-item" href="">
+              Hackiri.
+            </a>
+          </Link>
 
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -21,7 +23,7 @@ const NavBar = () => {
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <Link to="/Registration">
+                <Link to="/registration">
                   <a class="button is-black">
                     COMMENCER
                   </a>
