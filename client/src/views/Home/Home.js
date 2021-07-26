@@ -9,15 +9,25 @@ import { projectApi, registrationApi } from '../../api';
 
 function Home() {
 
-    const projectDefault = {creatorName: 'Aaron', creatorAlias: '@Mukin',
-     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
+    const projectAaron = {creatorName: 'Aaron', creatorAlias: '@Nswan mukin',
+     description: "Controle d'un pont roulant avec les gestes de main, techologies: Deep learning pour la vision par ordinateur, arduino, PID, Filtre de Kalman",
      creatorImageUrl: 'https://versions.bulma.io/0.7.1/images/placeholders/96x96.png',
-     imageUrl: 'https://versions.bulma.io/0.7.1/images/placeholders/1280x960.png'}
-    const [project, setProject] = useState(projectDefault);
+     imageUrl: 'https://ik.imagekit.io/tlr7lkiwqbj/73597814-80362400-4530-11ea-9345-488e8acbeddb_rqkv08tca.gif?updatedAt=1627303890647'}
+
+     const projectKevin = {creatorName: 'Aaron', creatorAlias: '@Kevin mulaja',
+      description: "Detection de plaque d'immatriculation, technologies: OpenCV, DeepLearning, YoloV4, Tesseract, Google colab",
+      creatorImageUrl: 'https://versions.bulma.io/0.7.1/images/placeholders/96x96.png',
+      imageUrl: 'https://ik.imagekit.io/tlr7lkiwqbj/0_bvJwx75_pszxcDlX_r2oudUQ8S.png?updatedAt=1627303908450'}
+
+      const projectEli = {creatorName: 'Aaron', creatorAlias: '@Eli',
+       description: "Conception d'un l'imnimetre et transmission automatique de l'information technologies: Arduino, capteur de niveau d'eau, Filtre bayesian, Python, C",
+       creatorImageUrl: 'https://versions.bulma.io/0.7.1/images/placeholders/96x96.png',
+       imageUrl: 'https://ik.imagekit.io/tlr7lkiwqbj/_rKubCYcAtM_pnr4HcJjG.jpg?updatedAt=1627304081390'}
+    const [project, setProject] = useState(projectAaron);
 
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
-      
+
     });
 
     return (
@@ -81,13 +91,13 @@ function Home() {
 
                 <div className="columns mt-6 px-6">
                   <div className="column is-one-thirds">
-                    <HackirienCard project={project}/>
+                    <HackirienCard project={projectAaron}/>
                   </div>
                   <div className="column is-one-thirds">
-                    <HackirienCard project={project}/>
+                    <HackirienCard project={projectKevin}/>
                   </div>
                   <div className="column is-one-thirds">
-                    <HackirienCard project={project}/>
+                    <HackirienCard project={projectEli}/>
                   </div>
                 </div>
 
